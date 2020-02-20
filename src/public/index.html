@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>Sockets</h1>
+
+    <div id="contentWrap">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <!-- CARD HEADER-->
+                    <div class="card-header bg-dark text-white">
+                        <h4>Escribe un Mensaje</h3>
+                    </div>
+
+                    <!-- CARD BODY-->
+                    <div id="chat" class="card-body"></div>
+
+                    <!-- CARD FOOTER -->
+                    <form id="message-form" class="card-footer">
+                        <div class="input-group">
+                            <input type="text" id="message" class="form-control" />
+                            <div class="input-group-append">
+                                <button class="btn btn-dark">
+                                    <i class="fas fa-location-arrow"></i> Enviar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-4">
+        <!-- NICKNAME FORM -->
+        <div id="userName">
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Ingresa un Nombre</h3>
+                        </div>
+                        <p id="userError"></p>
+                        <div class="card-body">
+                            <form id="userForm">
+                                <input id="name" type="text" class="form-control" autofocus />
+                                <input type="submit" value="Aceptar" class="btn btn-dark btn-block mt-2" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="UTF-8"></script>
+        <script src="/socket.io/socket.io.js" charset="UTF-8"></script>
+        <script src="./javascript/index.js" charset="UTF-8"></script>
+</body>
+
+</html>
