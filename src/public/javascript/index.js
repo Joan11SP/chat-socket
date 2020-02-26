@@ -28,6 +28,6 @@ $(function(){
     })
 })
    socket.on('nuevo mensaje',data=>{
-       $chat.append('<b>'+data.user+'</b>' +': '+ data.mensaje + '<br>' )
+       $chat.append(`${data.envioFecha} ` +'<b>'+data.user+'</b>' +': '+ data.mensaje +  '<br>' )
    })
 })

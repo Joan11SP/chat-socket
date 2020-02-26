@@ -6,7 +6,12 @@ module.exports=(io)=>{
         //receptar mensjaes
         socket.on('enviar mensaje',data=>{
             //reenviar mensaje
+            var fecha = new Date()
+            var hora = fecha.getHours()
+            var min = fecha.getMinutes()
+            var envio=`${hora}:${min}`
             io.sockets.emit('nuevo mensaje',{
+                envioFecha:envio,
                 mensaje:data,
                 user:socket.name
             })
