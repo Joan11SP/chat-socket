@@ -24,6 +24,11 @@ module.exports=(io)=>{
                 io.sockets.emit('usernames',names)
             }
             
-        })        
+        }) 
+        socket.on('disconnect',data=>{
+            if(!socket.name) return 
+            names.splice(socket.indexOf(socket.name,1))
+            io.sockets.emit('usernames',names)
+        })       
     })
 }
