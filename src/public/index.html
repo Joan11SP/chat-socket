@@ -15,7 +15,7 @@
 
     <div id="contentWrap">
         <div class="row">
-            <div class="col-md-8 mx-auto">
+            <div class="col-md-6 mx-auto">
                 <div class="card">
                     <!-- CARD HEADER-->
                     <div class="card-header bg-dark text-white">
@@ -38,7 +38,19 @@
                     </form>
                 </div>
             </div>
+
+            <div class="col-md-4 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        <h3>Usuarios Conectdos</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="usernames"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 
     <div class="container p-4">
@@ -61,10 +73,11 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="UTF-8"></script>
-        <script src="/socket.io/socket.io.js" charset="UTF-8"></script>
-        <script src="./javascript/index.js" charset="UTF-8"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="UTF-8"></script>
+    <script src="/socket.io/socket.io.js" charset="UTF-8"></script>
+    <script src="./javascript/index.js" charset="UTF-8"></script>
 </body>
 
 </html>

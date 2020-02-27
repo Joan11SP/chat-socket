@@ -21,8 +21,9 @@ module.exports=(io)=>{
                 callback(true)
                 socket.name=data
                 names.push(socket.name)
+                io.sockets.emit('usernames',names)
             }
             
-        })
+        })        
     })
 }

@@ -9,6 +9,7 @@ $(function(){
    const $userForm = $('#userForm');
    const $name = $('#name');
    const $userError= $('#userErro');
+   const $users = $('#usernames')
 
 
    //cancelar el evento del formulario 
@@ -30,4 +31,11 @@ $(function(){
    socket.on('nuevo mensaje',data=>{
        $chat.append(`${data.envioFecha} ` +'<b>'+data.user+'</b>' +': '+ data.mensaje +  '<br>' )
    })
+   socket.on('usernames', data => {
+    let html = '';
+    for(i = 0; i < data.length; i++) {
+      html += `<p>${data[i]}</p>`; 
+    }
+    $users.html(html);
+  });
 })
