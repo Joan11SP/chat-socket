@@ -16,7 +16,7 @@ $(function(){
    $message_form.submit(e=>{
        e.preventDefault()
        //llave para que se envie mensajes
-       socket.emit('enviar mensaje',$message.val());
+       socket.emit('enviar mensaje',$message.val());       
        $message.val('')
    })
    $userForm.submit(e=>{
